@@ -2,7 +2,9 @@ package com.Andrel.financesheet.mapper;
 
 import com.Andrel.financesheet.dto.UserDto;
 import com.Andrel.financesheet.model.UserModel;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UserMapper {
 
     public static UserModel toModel(UserDto userDto){
