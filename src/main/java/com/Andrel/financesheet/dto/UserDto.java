@@ -1,29 +1,26 @@
 package com.Andrel.financesheet.dto;
 
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
 import java.util.Objects;
 
 public class UserDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String surname;
     private String email;
+    private Boolean isActive=true;
+
 
     public UserDto() {
     }
 
-    public UserDto(Long id, String name, String surname, String email) {
+    public UserDto(Long id, String name, String surname, String email, Boolean isActive) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.email = email;
+        this.isActive = isActive;
     }
 
     public Long getId() {
@@ -56,6 +53,14 @@ public class UserDto {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Boolean getIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(Boolean isActive) {
+        isActive = isActive;
     }
 
     @Override

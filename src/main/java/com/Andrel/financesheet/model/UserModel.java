@@ -16,15 +16,17 @@ public class UserModel {
     private String name;
     private String surname;
     private String email;
+    private Boolean isActive=true;
 
     public UserModel() {
     }
 
-    public UserModel(Long id, String name, String surname, String email) {
+    public UserModel(Long id, String name, String surname, String email, Boolean isActive) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.email = email;
+        this.isActive = isActive;
     }
 
     public Long getId() {
@@ -57,6 +59,14 @@ public class UserModel {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Boolean getIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(Boolean active) {
+        isActive = active;
     }
 
     @Override
